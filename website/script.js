@@ -35,6 +35,6 @@ async function updateCounter() {
         "https://6xm3u6crbopx5piqmdztnmkjle0dziil.lambda-url.us-east-1.on.aws/"
     );
     let data = await response.json();
-    counter.innerHTML = `Views: ${data}`;
+    counter.innerHTML = `Visits: ${data}`;
 }
 updateCounter();
