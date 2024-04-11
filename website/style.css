@@ -118,9 +118,6 @@ section {
     margin-top: 50px;
 }
 
-h2 {
-    color: #333;
-}
 
 .social-icons {
     position: absolute;
@@ -203,8 +200,8 @@ body.night-mode .project-item {
 }
 
 .project-image img {
-    width: 100%;
     height: auto;
+
 }
 
 /* NIGHT/DAY MODE */
