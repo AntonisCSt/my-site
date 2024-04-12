@@ -254,3 +254,30 @@ h2.night-mode {
 #theme-toggle i {
     margin-right: 5px; /* Adds some space between the icon and the text */
 }
+
+
+.article {
+    display: flex;
+    align-items: center;
+}
+
+.patents {
+margin-bottom: -40px; /* Adjust as needed */
+}
+
+.publications {
+    margin-bottom: -40px; /* Adjust as needed */
+}
+
+.image-container {
+    margin-right: 20px; /* Adjust as needed */
+}
+
+.article-image {
+    width: 150px; /* Adjust width as needed */
+    height: auto;
+}
+
+.text-container {
+    flex-grow: 1;
+}
