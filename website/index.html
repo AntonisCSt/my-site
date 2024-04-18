@@ -3,6 +3,7 @@
 <head>
     <!-- ... (existing meta tags and links) ... -->
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-7lBb0xqoREv2UQ0QsQFnbml3U6H7pFmOVaRv/dzGn3I3JvRMltPIzshgKYQrV6r4" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
@@ -14,23 +15,22 @@
 
     <nav>
         <ul>
-            <li><a id="top-right-list" href="/">Home</a></li>
-            <li><a id="top-right-list" href="#aboutme">About me</a></li>
-            <li><a id="top-right-list" href="#projects">Projects</a></li>
-            <li><a id="top-right-list" href="/publications.html">Publications</a></li>            
+            <li><a class="top-right-list" href="/" target="_blank" rel="noopener noreferrer">Home</a></li>
+            <li><a class="top-right-list" href="#aboutme" target="_blank" rel="noopener noreferrer">About me</a></li>
+            <li><a class="top-right-list" href="#projects" target="_blank" rel="noopener noreferrer">Projects</a></li>
+            <li><a class="top-right-list" href="/publications.html" target="_blank" rel="noopener noreferrer">Publications</a></li>            
         </ul>
     </nav>
 
     <div class="main-content">
         <div class="social-icons">
-            <button id="theme-toggle">
-                <i class="fa fa-moon-o"></i> <!-- This icon can be changed with JavaScript -->
-
+            <button id="theme-toggle" aria-label="Toggle dark and light theme">
+                <i class="fa fa-moon-o" aria-hidden="true"></i>
             </button>
-            <a href="https://github.com/AntonisCSt/" class="fa fa-github" style="font-size: 30px;"></a>
-            <a href="https://www.linkedin.com/in/antonisstellas/" class="fa fa-linkedin" style="font-size: 30px;"></a>
-            <a href="https://twitter.com/StellasAntonis" class="fa fa-twitter" style="font-size: 30px;"></a>
-            <a href="https://medium.com/@a.x.stellas" class="fa fa-medium" style="font-size: 30px;"></a>
+            <a href="https://github.com/AntonisCSt/" class="fa fa-github" aria-label="Github" target="_blank" rel="noopener noreferrer" style="font-size: 30px;"></a>
+            <a href="https://www.linkedin.com/in/antonisstellas/" class="fa fa-linkedin" aria-label="Linkedin" target="_blank" rel="noopener noreferrer"  style="font-size: 30px;"></a>
+            <a href="https://twitter.com/StellasAntonis" class="fa fa-twitter" aria-label="Twitter" target="_blank" rel="noopener noreferrer" style="font-size: 30px;"></a>
+            <a href="https://medium.com/@a.x.stellas" class="fa fa-medium" aria-label="Medium" target="_blank" rel="noopener noreferrer" style="font-size: 30px;"></a>
 
         </div>
         <section id="aboutme">

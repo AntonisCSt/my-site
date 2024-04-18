@@ -44,24 +44,17 @@ updateCounter();
 /*-------------------Night/Day Button -------------------*/
 
 // Check for saved theme preference and apply it
-if(localStorage.getItem('theme') === 'night') {
-    document.body.classList.add('night-mode');
-}
 
-    // Assume you have FontAwesome loaded in your project
-    document.getElementById('theme-toggle').addEventListener('click', function() {
-    // Toggle the 'night-mode' class
+
+// Toggle night/day mode and fix the localStorage setting
+document.getElementById('theme-toggle').addEventListener('click', function() {
     document.body.classList.toggle('night-mode');
+    this.innerHTML = document.body.classList.contains('night-mode') ?
+        '<i class="fa fa-sun-o"></i>' :
+        '<i class="fa fa-moon-o"></i>';
+    localStorage.setItem('theme', document.body.classList.contains('night-mode') ? 'night' : 'day');
+});
 
-    // Check if the night mode is active to determine which icon to display
-    if(document.body.classList.contains('night-mode')) {
-        this.innerHTML = '<i class="fa fa-moon-o"></i>'; // Sun icon for day mode switch
-        localStorage.setItem('theme', 'day');
-    } else {
-        this.innerHTML = '<i class="fa fa-sun-o"></i>'; // Moon icon for night mode switch
-        localStorage.setItem('theme', 'night');
-    }
-});;
 
 
 
