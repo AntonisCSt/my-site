@@ -7,28 +7,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const targetId = this.getAttribute('href').substring(1);
 
-            // Check if the target is in the same page or a different page
-            if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-                // Same page
+            if (document.getElementById(targetId)) {
+                // Only attempt to scroll if the target element exists on the page
                 scrollToSection(targetId);
             } else {
-                // Different page
+                // Redirect to the href as it might be pointing to a different page
                 window.location.href = this.getAttribute('href');
             }
         });
     });
 
-    // Function to scroll to the target section smoothly
     function scrollToSection(targetId) {
         const targetSection = document.getElementById(targetId);
-
-        window.scrollTo({
-            top: targetSection.offsetTop,
-            behavior: 'smooth'
-        });
+        if (targetSection) { // Ensure element exists
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
     }
 });
 
+// Code for the counter and theme toggle remains unchanged
 const counter = document.querySelector(".counter-number");
 async function updateCounter() {
     let response = await fetch(
@@ -39,13 +39,8 @@ async function updateCounter() {
 }
 updateCounter();
 
-
-
 /*-------------------Night/Day Button -------------------*/
-
 // Check for saved theme preference and apply it
-
-
 // Toggle night/day mode and fix the localStorage setting
 document.getElementById('theme-toggle').addEventListener('click', function() {
     document.body.classList.toggle('night-mode');
@@ -54,7 +49,3 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
         '<i class="fa fa-moon-o"></i>';
     localStorage.setItem('theme', document.body.classList.contains('night-mode') ? 'night' : 'day');
 });
-
-
-
-
