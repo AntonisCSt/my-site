@@ -26,6 +26,12 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
+
+    // Handle URL hash on load to scroll to the section
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+        scrollToSection(hash);
+    }
 });
 
 // Code for the counter and theme toggle remains unchanged
