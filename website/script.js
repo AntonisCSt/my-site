@@ -1,17 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const navLinks = document.querySelectorAll('nav a');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'night') {
+        document.body.classList.add('night-mode');
+        document.getElementById('theme-toggle').innerHTML = '<i class="fa fa-sun-o"></i>';
+    } else {
+        document.body.classList.remove('night-mode');
+        document.getElementById('theme-toggle').innerHTML = '<i class="fa fa-moon-o"></i>';
+    }
 
+    // Existing navigation code and other functionality
+    const navLinks = document.querySelectorAll('nav a');
     navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
-
-            const targetId = this.getAttribute('href').substring(1);
-
+            let targetId = this.getAttribute('href').substring(1);
             if (document.getElementById(targetId)) {
-                // Only attempt to scroll if the target element exists on the page
                 scrollToSection(targetId);
             } else {
-                // Redirect to the href as it might be pointing to a different page
                 window.location.href = this.getAttribute('href');
             }
         });
@@ -19,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function scrollToSection(targetId) {
         const targetSection = document.getElementById(targetId);
-        if (targetSection) { // Ensure element exists
+        if (targetSection) {
             window.scrollTo({
                 top: targetSection.offsetTop,
                 behavior: 'smooth'
@@ -27,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Handle URL hash on load to scroll to the section
     const hash = window.location.hash.substring(1);
     if (hash) {
         scrollToSection(hash);
