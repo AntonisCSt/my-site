@@ -281,3 +281,26 @@ margin-bottom: -40px; /* Adjust as needed */
 .text-container {
     flex-grow: 1;
 }
+
+
+/* CSS Media Query for screens smaller than 768 pixels */
+@media only screen and (max-width: 768px) {
+    nav {
+        position: static; /* Adjust the position of nav bar */
+        margin-right: 20px; /* Reduced margin */
+    }
+
+    .social-icons {
+        position: static; /* Adjust the position to avoid overlap */
+        margin-top: 10px; /* Add space between nav and icons */
+        text-align: center; /* Center the icons */
+    }
+
+    .main-content {
+        margin-top: 20px; /* Increase the top margin to accommodate nav and icons */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+
