@@ -62,8 +62,8 @@ body.night-mode .social-icons a {
     list-style: none;
     padding: 0;
     margin-top: 20px;
-    right: 20%;
-    transform: translateX(20%); /* Fine-tune horizontal position */
+    right: 25%;
+    transform: translateX(25%); /* Fine-tune horizontal position */
 }
 
 .social-icons {
@@ -74,8 +74,8 @@ body.night-mode .social-icons a {
     display: flex;
     list-style: none;
     padding: 0;
-    transform: translateX(-20%); /* Fine-tune horizontal position */
-    left: 20%; /* Adjust this value to move it closer to the center */
+    transform: translateX(-15%); /* Fine-tune horizontal position */
+    left: 15%; /* Adjust this value to move it closer to the center */
 }
 
 a:hover {
