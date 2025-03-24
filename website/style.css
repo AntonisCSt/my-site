@@ -14,10 +14,13 @@ header {
 }
 
 nav {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-right: 300px;
+    position: relative; /* Ensure the nav container is positioned */
+    width: 100%; /* Make the nav span the full width */
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    height: 50px;
+    display: flex;
 }
 
 ul {
@@ -50,6 +53,31 @@ body.night-mode .social-icons a {
     color: #FFF; /* Change to your desired color for night mode */
 }
 
+.info-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0px; /* Add some spacing from the edges */
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    right: 20%;
+    transform: translateX(20%); /* Fine-tune horizontal position */
+}
+
+.social-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0px; /* Add some spacing from the edges */
+    display: flex;
+    list-style: none;
+    padding: 0;
+    transform: translateX(-20%); /* Fine-tune horizontal position */
+    left: 20%; /* Adjust this value to move it closer to the center */
+}
+
 a:hover {
     color: #007bff; /* Change to your desired hover color */
     transition: color 0.3s ease;
@@ -59,11 +87,6 @@ a:hover {
     margin-top: 90px; 
     margin-left: 250px;
     margin-right: 300px;
-}
-
-.aboutme-content {
-
-    text-align: center;
 }
 
 .intro-image {
@@ -115,9 +138,14 @@ button:hover {
 
 section {
     padding: 20px;
-    margin-top: 50px;
+    margin-top: 0px;
 }
 
+.aboutme-content {
+
+    text-align: center;
+    margin-top: 0px;
+}
 
 .social-icons {
     position: absolute;
@@ -204,6 +232,11 @@ body.night-mode .project-item {
 
 }
 
+.project-category {
+
+    margin-top: 20px;
+}
+
 /* NIGHT/DAY MODE */
 
 /* Day mode styles (default) */
@@ -281,6 +314,7 @@ margin-bottom: -40px; /* Adjust as needed */
 .text-container {
     flex-grow: 1;
 }
+
 
 
 /* CSS Media Query for screens smaller than 768 pixels */
