@@ -12,7 +12,6 @@ IAM user s3 bucket policy restriction []
 
 SITE
 Change first page []
-Add Udemy course
 important when adding environment secrets to GithubActions: 
 
 Don't forget to add environment:'your environment'
