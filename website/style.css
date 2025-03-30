@@ -171,6 +171,13 @@ section {
     margin-bottom: 30px; /* Adjust as needed */
 }
 
+/* For the Articles section */
+#Articles {
+    margin-left: 210px;
+    margin-right: 210px;
+
+}
+
 .articles-bottom {
     margin-top: -15px; /* Adjust as needed */
 }
