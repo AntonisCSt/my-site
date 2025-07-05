@@ -1,9 +1,11 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e8e8f1;
-    transition: background-color 0.5s ease, color 0.5s ease; /* Consolidated transition */
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 header {
@@ -14,13 +16,16 @@ header {
 }
 
 nav {
-    position: relative; /* Ensure the nav container is positioned */
-    width: 100%; /* Make the nav span the full width */
-    margin: 0;
-    padding: 0;
-    justify-content: space-between;
-    height: 50px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 60px;
+    padding: 0 24px;
+    background: transparent;
+    position: relative;
+    box-sizing: border-box;
 }
 
 ul {
@@ -43,35 +48,75 @@ a {
     transition: all 0.3s ease;
 }
 
-
 .info-bar {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0px; /* Add some spacing from the edges */
     display: flex;
-    list-style: none;
+    align-items: center;
+    margin: 0;
     padding: 0;
-    margin-top: 20px;
-    right: 25%;
-    transform: translateX(25%); /* Fine-tune horizontal position */
+    position: static;
+    transform: none;
+    right: auto;
+    top: auto;
+}
+
+.info-bar li {
+    margin-right: 1.5rem;
+}
+
+.top-right-list {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #495057;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.top-right-list:hover {
+    color: #007bff;
+}
+
+.top-right-list::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff;
+    transition: width 0.2s ease;
+}
+
+.top-right-list:hover::after {
+    width: 100%;
 }
 
 .social-icons {
     position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0px; /* Add some spacing from the edges */
     display: flex;
-    list-style: none;
+    align-items: center;
+    margin: 0;
     padding: 0;
-    transform: translateX(-15%); /* Fine-tune horizontal position */
-    left: 15%; /* Adjust this value to move it closer to the center */
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
 }
 
-a:hover {
-    color: #007bff; /* Change to your desired hover color */
-    transition: color 0.3s ease;
+.social-icons a {
+    color: #495057;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: all 0.2s ease;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
+    transform: translateY(-2px);
 }
 
 .main-content {
@@ -126,33 +171,14 @@ button:hover {
     margin-top: 20px; /* Adjust the value as needed */
 }
 
-
 section {
     padding: 20px;
     margin-top: 0px;
 }
 
 .aboutme-content {
-
     text-align: center;
     margin-top: 0px;
-}
-
-.social-icons {
-    position: absolute;
-    top: 20px;
-    margin-left: 50px;
-    
-}
-.social-icons a {
-    color: #333;
-    font-size: 20px;
-    margin-right: 10px;
-    transition: color 0.3s ease;
-
-}
-.social-icons a:hover {
-    color: #007bff; /* Change to your desired hover color */
 }
 
 .talk {
@@ -164,22 +190,101 @@ section {
 }
 
 .articles {
-    margin-bottom: -40px; /* Adjust as needed */
+    margin-bottom: 2rem;
 }
 
 .article {
-    margin-bottom: 30px; /* Adjust as needed */
+    display: flex;
+    align-items: flex-start;
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #e9ecef;
+}
+
+.article:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+}
+
+.article-image {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-container h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0 0 0.75rem 0;
+    border: none;
+    padding: 0;
+}
+
+.text-container h3 a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.text-container h3 a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.articles-bottom {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
 }
 
 /* For the Articles section */
 #Articles {
     margin-left: 210px;
     margin-right: 210px;
-
+    padding: 40px 0;
 }
 
-.articles-bottom {
-    margin-top: -15px; /* Adjust as needed */
+#Articles h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+#Articles h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #34495e;
+    margin: 2rem 0 1.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
 }
 
 .project-grid {
@@ -187,7 +292,6 @@ section {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
-
 
 .project-info {
     padding: 20px;
@@ -216,41 +320,19 @@ section {
 
 .project-image img {
     height: auto;
-
 }
 
 .project-category {
-
     margin-top: 20px;
 }
 
-.article {
-    display: flex;
-    align-items: center;
-}
-
 .patents {
-margin-bottom: -40px; /* Adjust as needed */
+    margin-bottom: -40px; /* Adjust as needed */
 }
 
 .publications {
     margin-bottom: -40px; /* Adjust as needed */
 }
-
-.image-container {
-    margin-right: 20px; /* Adjust as needed */
-}
-
-.article-image {
-    width: 150px; /* Adjust width as needed */
-    height: auto;
-}
-
-.text-container {
-    flex-grow: 1;
-}
-
-
 
 /* CSS Media Query for screens smaller than 768 pixels */
 @media only screen and (max-width: 768px) {
@@ -269,6 +351,408 @@ margin-bottom: -40px; /* Adjust as needed */
         margin-top: 20px; /* Increase the top margin to accommodate nav and icons */
         margin-left: 20px;
         margin-right: 20px;
+    }
+
+    #Articles {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 20px 0;
+    }
+    
+    #Articles h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    #Articles h3 {
+        font-size: 1.5rem;
+        margin: 1.5rem 0 1rem 0;
+    }
+    
+    .article {
+        flex-direction: column;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .image-container {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    .article-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+    
+    .text-container h3 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .articles-bottom {
+        text-align: center;
+    }
+}
+
+/* Enhanced typography and spacing for all pages */
+#Articles, #publications, #patents, #talks, #projects {
+    margin-left: 210px;
+    margin-right: 210px;
+    padding: 40px 0;
+}
+
+#Articles h1, #publications h1, #patents h1, #talks h1, #projects h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+#Articles h2, #publications h2, #patents h2, #talks h2, #projects h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #34495e;
+    margin: 2rem 0 1.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+#Articles h3, #publications h3, #patents h3, #talks h3, #projects h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #34495e;
+    margin: 1.5rem 0 1rem 0;
+}
+
+/* Home page specific styles */
+.hero-section {
+    text-align: center;
+    padding: 0.1rem 0;
+}
+
+.profile-image {
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border: 4px solid white;
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+.about-section {
+    margin-top: 1rem;
+    padding: 1rem 0;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.about-content h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #495057;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+}
+
+.about-text strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.external-link {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.external-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.dtc-logo {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 200px;
+    height: 45px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+    background: linear-gradient(135deg, #0056b3, #004085);
+}
+
+/* Projects page specific styles */
+.projects-section {
+    margin-left: 210px;
+    margin-right: 210px;
+    padding: 40px 0;
+}
+
+.project-category {
+    margin-bottom: 3rem;
+}
+
+.project-category h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #34495e;
+    margin: 2rem 0 1.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.project-item {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #e9ecef;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-info {
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.project-info h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 1rem 0;
+    line-height: 1.4;
+}
+
+.project-info p {
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.project-link:hover {
+    color: #0056b3;
+    background-color: rgba(0, 123, 255, 0.15);
+    transform: translateX(4px);
+}
+
+.project-link.disabled {
+    color: #6c757d;
+    background-color: #f8f9fa;
+    cursor: not-allowed;
+}
+
+.project-link.disabled:hover {
+    transform: none;
+    background-color: #f8f9fa;
+}
+
+.project-link i {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Publications and Talks specific styles */
+.publications-section, .patents-section, .talks-section {
+    margin-left: 210px;
+    margin-right: 210px;
+    padding: 40px 0;
+}
+
+.talks {
+    margin-top: 1.5rem;
+}
+
+.talk {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #e9ecef;
+}
+
+.talk:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.talk h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 0.5rem 0;
+}
+
+.talk h3 a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.talk h3 a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.talks-bottom {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Enhanced footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    color: #6c757d;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Responsive improvements for all pages */
+@media only screen and (max-width: 768px) {
+    #Articles, #publications, #patents, #talks, #projects, .projects-section, .publications-section, .patents-section, .talks-section {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 20px 0;
+    }
+    
+    #Articles h1, #publications h1, #patents h1, #talks h1, #projects h1, .about-content h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    #Articles h2, #publications h2, #patents h2, #talks h2, #projects h2, .project-category h2 {
+        font-size: 1.5rem;
+        margin: 1.5rem 0 1rem 0;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-item {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .project-info h3 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .project-img {
+        height: 150px;
+    }
+    
+    .talk {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .talk h3 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .about-content {
+        padding: 0 1rem;
+    }
+    
+    .about-text {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        width: 180px;
+        height: 40px;
+        font-size: 1rem;
     }
 }
 

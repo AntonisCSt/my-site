@@ -1,125 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- ... (existing meta tags and links) ... -->
-        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Antonis Stellas - Portfolio of Machine Learning and Data Science Projects">
+        <meta name="keywords" content="Antonis Stellas, projects, machine learning, data science, MLOps, engineering">
+        <meta name="author" content="Antonis Stellas">
+        
+        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
-        <title>Antonis Stellas - Personal Website</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap">
+        
+        <title>Projects - Antonis Stellas | Machine Learning Engineer</title>
     </head>
     <body>
-
         <nav>
             <ul class="info-bar">
-                    <li><a class="top-right-list" href="/">Home</a></li>
-                    <li><a class="top-right-list" href="/blog.html">Blog</a></li>
-                    <li><a class="top-right-list" href="/projects.html">Projects</a></li>
-                    <li><a class="top-right-list" href="/publications.html">Publications</a></li>            
+                <li><a class="top-right-list" href="/">Home</a></li>
+                <li><a class="top-right-list" href="/blog.html">Blog</a></li>
+                <li><a class="top-right-list" href="/projects.html">Projects</a></li>
+                <li><a class="top-right-list" href="/publications.html">Publications</a></li>            
             </ul>
             <ul class="social-icons">
-                <li><a href="https://github.com/AntonisCSt/" class="fa fa-github" aria-label="Github" target="_blank" rel="noopener noreferrer" style="font-size: 30px;"></a></li>
-                <li><a href="https://www.linkedin.com/in/antonisstellas/" class="fa fa-linkedin" aria-label="Linkedin" target="_blank" rel="noopener noreferrer"  style="font-size: 30px;"></a></li>
-                <li><a href="https://twitter.com/StellasAntonis" class="fa fa-twitter" aria-label="Twitter" target="_blank" rel="noopener noreferrer" style="font-size: 30px;"></a></li>
-                <li><a href="https://medium.com/@a.x.stellas" class="fa fa-medium" aria-label="Medium" target="_blank" rel="noopener noreferrer" style="font-size: 30px;"></a></li>
-    
+                <li><a href="https://github.com/AntonisCSt/" class="fa fa-github" aria-label="Github" target="_blank" rel="noopener noreferrer"></a></li>
+                <li><a href="https://www.linkedin.com/in/antonisstellas/" class="fa fa-linkedin" aria-label="Linkedin" target="_blank" rel="noopener noreferrer"></a></li>
+                <li><a href="https://twitter.com/StellasAntonis" class="fa fa-twitter" aria-label="Twitter" target="_blank" rel="noopener noreferrer"></a></li>
+                <li><a href="https://medium.com/@a.x.stellas" class="fa fa-medium" aria-label="Medium" target="_blank" rel="noopener noreferrer"></a></li>
             </ul>
         </nav>
 
-    <section id="projects">
-        <h2>Projects</h2>
-    
-        <!-- Technology and Engineering Projects -->
-        <div class="project-category">
-            <h3>Personal Projects</h3>
-            <hr>
-            <div class="project-grid">
-                <!-- Project 1 -->
-                <div class="project-item">
-                    <div class="project-info">
-                        <h4>Semiconductor quality prediction and pipeline</h4>
-                        <p>An MLOps pipeline on semiconductor quality prediction. The projects contains semiconductor sensor data and classifies the end product as Pass or Fail. There are ~580 sensor features that are used. 
-                            Stack used: MLflow, Prefect, AWS S3, Docker, MongoDB, EvidentlyAI, Prometheus, Grafana  </p>
-                        <a href="https://github.com/AntonisCSt/Mlops_project_semicon">Read More <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="project-image">
-                        <img src="images\Project_solution_architecure_v1.png" alt="Project 1 Image" width="400px">
-                    </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="project-item">
-                    <div class="project-info">
-                        <h4>Tracking DataTalksClub's Youtube playlist stats</h4>
-                        <p>A batch and stream process for tracking Youtube's API stats. Stack used: Kafka, Prefect, dbt, GCP Storage, BigQuery, Terraform</p>
-                        <a href="https://github.com/AntonisCSt/DTC_data_engineering_project">Read More <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="project-image">
-                        <img src="images\dtc_eng_project.png" alt="Project 2 Image" width="400px">
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Design and Creativity Projects -->
-        <div class="project-category">
-            <h3>Engineering Doctorate (EngD) Projects</h3>
-            <hr>
-            <div class="project-grid">
-                <!-- Project 3 -->
-                <div class="project-item">
-                    <div class="project-info">
-                        <h4>Implementation of Omron's self-learning assembly line demo</h4>
-                        <p> Built system that uses a machine learning model as well as a collaboration of different user modes that receive user's input data and project optimal assembly step sequences. </p>
-                        <a href="#">Read More <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="project-image">
-                        <img src="images\Omron.png" alt="Project 3 Image" width="200px">
+        <main>
+            <section id="projects" class="projects-section">
+                <h1>Projects</h1>
+            
+                <!-- Personal Projects -->
+                <div class="project-category">
+                    <h2>Personal Projects</h2>
+                    <div class="project-grid">
+                        <!-- Project 1 -->
+                        <article class="project-item">
+                            <div class="project-info">
+                                <h3>Semiconductor quality prediction and pipeline</h3>
+                                <p>An MLOps pipeline on semiconductor quality prediction. The projects contains semiconductor sensor data and classifies the end product as Pass or Fail. There are ~580 sensor features that are used. 
+                                    Stack used: MLflow, Prefect, AWS S3, Docker, MongoDB, EvidentlyAI, Prometheus, Grafana</p>
+                                <a href="https://github.com/AntonisCSt/Mlops_project_semicon" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    View Project <i class="fa fa-external-link" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="project-image">
+                                <img src="images\Project_solution_architecure_v1.png" alt="Semiconductor Quality Prediction Pipeline Architecture" class="project-img">
+                            </div>
+                        </article>
+                        
+                        <!-- Project 2 -->
+                        <article class="project-item">
+                            <div class="project-info">
+                                <h3>Tracking DataTalksClub's Youtube playlist stats</h3>
+                                <p>A batch and stream process for tracking Youtube's API stats. Stack used: Kafka, Prefect, dbt, GCP Storage, BigQuery, Terraform</p>
+                                <a href="https://github.com/AntonisCSt/DTC_data_engineering_project" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    View Project <i class="fa fa-external-link" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="project-image">
+                                <img src="images\dtc_eng_project.png" alt="DataTalksClub Data Engineering Project" class="project-img">
+                            </div>
+                        </article>
                     </div>
                 </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <h4>Statistical process control for IPC assembly line's checker machines</h4>
-                        <p> I conducted root cause analysis for a quality checking machine issue by querying sensor data, analyzing it, and visualizing findings to identify malfunctioning parts. To prevent future problems, I implemented statistical process control measures for early detection on the assembly line. </p>
-                        <a href="#">Read More <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            
+                <!-- Engineering Doctorate Projects -->
+                <div class="project-category">
+                    <h2>Engineering Doctorate (EngD) Projects</h2>
+                    <div class="project-grid">
+                        <!-- Project 3 -->
+                        <article class="project-item">
+                            <div class="project-info">
+                                <h3>Implementation of Omron's self-learning assembly line demo</h3>
+                                <p>Built system that uses a machine learning model as well as a collaboration of different user modes that receive user's input data and project optimal assembly step sequences.</p>
+                                <a href="#" class="project-link disabled">Project Details <i class="fa fa-lock" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="project-image">
+                                <img src="images\Omron.png" alt="Omron Assembly Line Project" class="project-img">
+                            </div>
+                        </article>
+                        
+                        <article class="project-item">
+                            <div class="project-info">
+                                <h3>Statistical process control for IPC assembly line's checker machines</h3>
+                                <p>I conducted root cause analysis for a quality checking machine issue by querying sensor data, analyzing it, and visualizing findings to identify malfunctioning parts. To prevent future problems, I implemented statistical process control measures for early detection on the assembly line.</p>
+                                <a href="#" class="project-link disabled">Project Details <i class="fa fa-lock" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="project-image">
+                                <img src="images\Omron.png" alt="IPC Assembly Line Quality Control" class="project-img">
+                            </div>                        
+                        </article>
+                        
+                        <article class="project-item">
+                            <div class="project-info">
+                                <h3>Dust particle size estimation</h3>
+                                <p>To improve wafer production, ASML utilized spectroscopy image data to estimate the size of dust particles on their reticles. By creating and testing new features, I optimized the estimation process, leading to more accurate predictions using ML models.</p>
+                                <a href="#" class="project-link disabled">Project Details <i class="fa fa-lock" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="project-image">
+                                <img src="images\asml.png" alt="ASML Dust Particle Estimation" class="project-img">
+                            </div>                        
+                        </article>
+                        
+                        <article class="project-item">
+                            <div class="project-info">
+                                <h3>Identification of opportunities for profitable growth in product sales</h3>
+                                <p>The analysis examined factors impacting profit margins, pricing strategies, and customer relationships, using PCA to reduce the dimensionality of the dataset and clustering techniques to identify distinct customer segments, each with specific actionable insights to enhance profitability.</p>
+                                <a href="#" class="project-link disabled">Project Details <i class="fa fa-lock" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="project-image">
+                                <img src="images\te.jpg" alt="TE Connectivity Sales Analysis" class="project-img">
+                            </div>                        
+                        </article>
                     </div>
-                    <div class="project-image">
-                        <img src="images\Omron.png" alt="Project 3 Image" width="200px">
-                    </div>                        
                 </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <h4>Dust particle size estimation</h4>
-                        <p> To improve wafer production, ASML utilized spectroscopy image data to estimate the size of dust particles on their reticles. By creating and testing new features, I optimized the estimation process, leading to more accurate predictions using ML models. </p>
-                        <a href="#">Read More <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="project-image">
-                        <img src="images\asml.png" alt="Project 3 Image" width="200px">
-                    </div>                        
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <h4>Identification of opportunities for profitable growth in product sales</h4>
-                        <p> The analysis examined factors impacting profit margins, pricing strategies, and customer relationships, using PCA to reduce the dimensionality of the dataset and clustering techniques to identify distinct customer segments, each with specific actionable insights to enhance profitability. </p>
-                        <a href="#">Read More <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="project-image">
-                        <img src="images\te.jpg" alt="Project 3 Image" width="200px">
-                    </div>                        
-                </div>
-            </div>
-        </div>
+            </section>
+        </main>
 
-        
-    </section>
-        
-</div>
+        <footer>
+            <p>&copy; 2025 Antonis C. Stellas</p>
+        </footer>
 
-<footer>
-    <p>&copy; 2025 Antonis C. Stellas</p>
-</footer>
-
-<script src="script.js"></script>
-
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
